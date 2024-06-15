@@ -1,0 +1,126 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /* Colores */
+  --background: #FFF4EA;
+  --dark-brown: #592502;
+  --gradient-color: #BDAF86;
+  /* Fuentes */
+  --font1: "Petrona", serif;
+  --font2: "Nunito", sans-serif;
+}
+
+/*===== ESTILOS GENERALES =====*/
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+}
+
+/* LOADING */
+.loading {
+  height: 100vh;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 61%;
+  animation: load 2s 1s ease-in-out forwards, moveOut 1s 3s forwards;
+}
+
+@keyframes load {
+  0% {
+    width: 61%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 61%;
+  }
+}
+
+@keyframes moveOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
+
+/*===== OCULTAR EL LOADING =====*/
+body.animation-complete .loading {
+  display: none;
+}
+
+/*===== MAIN =====*/
+main {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--gradient-color)), url('assets/j&l.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3em;
+  margin: 0;
+  font-family: var(--font1);
+  font-style: italic;
+  font-weight: 800;
+}
+
+.text {
+  font-family: var(--font2);
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.main_container{
+  margin-top: 350px;
+}
+
+.arrow{
+    width: 32px;
+    margin-top: 25px;
+    animation: arrow 1s ease infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/*===== MOSTRAR TODO =====*/
+body.animation-complete main {
+  opacity: 1;
+}
+
+/*===== ESTILOS DEL GRADIENTE =====*/
+.gradient {
+  text-align: center;
+  color: var(--dark-brown);
+}
