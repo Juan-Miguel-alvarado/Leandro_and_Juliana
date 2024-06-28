@@ -17,6 +17,8 @@ body {
   margin: 0;
   padding: 0;
   background: var(--background);
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .sec{
@@ -230,12 +232,14 @@ body.animation-complete main{
   border-radius: 30px;
   font-family: var(--font2);
   font-weight: 800;
+  z-index: 999;
 }
 .hojas{
   position: relative;
-  right: -0px;
+  right: -60px;
   top: -325px;
   width: 400px;
+  z-index: -1;
 }
 
 .grid-place{
@@ -244,7 +248,6 @@ body.animation-complete main{
   gap: 11px;
   position: relative;
   top: -320px;
-  left: -25px;
   width: 100vw;
 }
 
@@ -256,7 +259,7 @@ body.animation-complete main{
 }
 
 .container-place img{
-  width: 193px;
+  width: 182px;
   height: 172px;
 }
 
