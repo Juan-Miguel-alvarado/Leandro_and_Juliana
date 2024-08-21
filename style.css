@@ -214,6 +214,7 @@ body.animation-complete main{
 .text-place{
   font-size: 18px;
   font-family: var(--font2);
+  text-align: center;
 }
 
 .title-place{
@@ -222,6 +223,7 @@ body.animation-complete main{
   font-weight: 900;
   font-style: italic;
   margin-top: 60px;
+  text-align: cemter;
 }
 
 .buttom{
@@ -261,6 +263,39 @@ body.animation-complete main{
 .container-place img{
   width: 182px;
   height: 172px;
+}
+
+/*===== COUNTER =====*/
+.text-counter-title{
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+}
+
+#counter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.simply-section{
+
+}
+
+.simply-section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font2);
+}
+.simply-amount{
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px -2px rgba(89, 37, 2, 0.22);
+  padding: 25px 20px ;
+  border-radius: 6px;
+  font-family: var(--font1);
+  font-weight: bold;
 }
 
 /*===== 🧦🧦 MEDIA QUERIS =====*/
