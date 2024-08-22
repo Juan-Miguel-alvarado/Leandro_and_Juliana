@@ -316,6 +316,72 @@ justify-content: space-around;
     border-radius: 8px;
 }
 
+.minicontainer{
+    display: flex;
+    justify-content: end;
+}
+
+.container {
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.text1 {
+    font-size: 24px;
+    color: #8B5E3C;
+    font-weight: bolder;
+    font-family: var(--font2);
+    position: absolute;
+    z-index: 99;
+}
+
+.text1::after {
+    content: "↩";
+    display: inline-block;
+    margin-left: 8px;
+    transform: rotate(270deg); /* Rotate to match the arrow direction */
+}
+
+.images {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    margin-top: 50px;
+}
+
+.images .image {
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.images .image.large {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -50px;
+    left: -30px;
+}
+
+.pies {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 50px;
+    left:  -20px;
+}
+
+.vestidos{
+    position: absolute;
+    top: 60px;
+    left:  90px;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /*===== MEDIA QUERYS =====*/
