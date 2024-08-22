@@ -1,15 +1,47 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//     const logo = document.querySelector('.logo');
+//     logo.addEventListener('animationend', (event) => {
+//         if (event.animationName === 'moveOut') {
+//             document.body.classList.add('animation-complete');
+//         }
+//     });
+// });
+
+// /*==== HEADER ====*/
+// document.addEventListener('DOMContentLoaded', () => {
+//     const header = document.querySelector('.header');
+
+//     const onScroll = () => {
+//         if (window.scrollY > 0) {
+//             header.classList.add('scrolled');
+//         } else {
+//             header.classList.remove('scrolled');
+//         }
+//     };
+
+//     window.addEventListener('scroll', onScroll);
+    
+//     const logo = document.querySelector('.logo');
+//     logo.addEventListener('animationend', (event) => {
+//         if (event.animationName === 'moveOut') {
+//             document.body.classList.add('animation-complete');
+//             header.classList.add('visible');
+//         }
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', () => {
     const logo = document.querySelector('.logo');
+    const main = document.querySelector('main');
+    const header = document.querySelector('.header');
+
     logo.addEventListener('animationend', (event) => {
         if (event.animationName === 'moveOut') {
             document.body.classList.add('animation-complete');
+            header.classList.add('visible');
+            main.classList.add('visible'); // Muestra el contenido principal
         }
     });
-});
-
-/*==== HEADER ====*/
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.header');
 
     const onScroll = () => {
         if (window.scrollY > 0) {
@@ -20,17 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', onScroll);
-    
-    const logo = document.querySelector('.logo');
-    logo.addEventListener('animationend', (event) => {
-        if (event.animationName === 'moveOut') {
-            document.body.classList.add('animation-complete');
-            header.classList.add('visible');
-        }
-    });
 });
 
-/*==== CONTADOR ====*/
+/*==== COUNTER ====*/
 
     // This is an example with default parameters
     // You'll always have to call simplyCountdown using ID's, no classes.
