@@ -25,6 +25,9 @@ body {
   text-align: center;
 }
 
+.background{
+background-color: #ffffff;
+}
 /*===== LOADING =====*/
 .loading {
   height: 100vh;
@@ -167,6 +170,12 @@ main.visible {
 }
 
 /*===== VIDEO =====*/
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /*===== DATE =====*/
 .date {
@@ -316,30 +325,9 @@ justify-content: space-around;
     border-radius: 8px;
 }
 
-.minicontainer{
-    display: flex;
-    justify-content: end;
-}
-
-.container {
+/* .container {
     gap: 2rem;
     padding: 1rem;
-}
-
-.text1 {
-    font-size: 24px;
-    color: #8B5E3C;
-    font-weight: bolder;
-    font-family: var(--font2);
-    position: absolute;
-    z-index: 99;
-}
-
-.text1::after {
-    content: "↩";
-    display: inline-block;
-    margin-left: 8px;
-    transform: rotate(270deg); /* Rotate to match the arrow direction */
 }
 
 .images {
@@ -350,37 +338,86 @@ justify-content: space-around;
 }
 
 .images .image {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .images .image.large {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     position: absolute;
-    top: -50px;
-    left: -30px;
+    top: -60px;
 }
 
-.pies {
-    width: 140px;
-    height: 140px;
-    position: absolute;
-    top: 50px;
-    left:  -20px;
-}
-
-.vestidos{
-    position: absolute;
-    top: 60px;
-    left:  90px;
+.large{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+} */
+
+.img-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/*===== CAR =====*/
+.link{
+  font-weight: bolder;
+  color: var(--dark-brown);
+  font-style: italic;
+}
+
+/*===== GIFTS =====*/
+.container-buttons{
+  height:120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/*===== FOOTER =====*/
+footer{
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  background-color: var(--dark-brown);
+  padding: 18px;
+}
+
+footer img{
+  width: 100px;
+}
+
+footer div{
+   display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+footer div h3{
+  margin: 0;
+  color: var(--background);
+  font-style: italic;
+}
+
+footer p{
+  font-family: var(--font2);
+  color:var(--background);
+  font-size: 13px;
 }
 
 
