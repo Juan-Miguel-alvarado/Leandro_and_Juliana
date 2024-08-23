@@ -406,6 +406,8 @@ footer div{
 }
 
 footer div h3{
+  font-family: var(--font1);
+  font-size: 25px;
   margin: 0;
   color: var(--background);
   font-style: italic;
