@@ -95,3 +95,4 @@ simplyCountdown(myElement, { /* options */ });
 
 let multipleElements = document.querySelectorAll('.my-countdown');
 simplyCountdown(multipleElements, { /* options */ });
+
