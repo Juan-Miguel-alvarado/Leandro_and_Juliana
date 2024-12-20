@@ -363,49 +363,55 @@ justify-content: space-around;
   gap: 8px;
 }
 
-.button_bank{
+.expandable-card{
+border: 1px solid #E8E0C9 ;
+border-radius: 10px;
+overflow: hidden;
+margin-bottom: 16px;
+}
+
+.toggle-card {
+  display: none;
+}
+
+.expandable-header{
+  background-color:#e8e0c95d;
   cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  border: none;
-  color: #e8e0c9;
-  width: 240px;
-  background: var(--dark-brown);
-  padding: 13px 35px;
-  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+
+.toggle-text{
   font-family: var(--font2);
-  font-weight: 800; 
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 999;
+.expandable-content{
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Modal */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  display: none;
-  z-index: 1000;
+.expandable-content p{
+  padding-left: 16px;
 }
 
-/* Mostrar modal */
-.modal.active,
-.overlay.active {
-  display: block;
+.toggle-card:checked {
+  + .expandable-header .toggle-text::after {
+    content: "Cerrar";
+  }
+
+  + .expandable-header + .expandable-content {
+    height: auto;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.expandable-header .toggle-text::after {
+  content: "Abrir";
 }
 /*===== FOOTER =====*/
 footer{
