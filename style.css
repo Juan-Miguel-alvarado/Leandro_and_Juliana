@@ -494,3 +494,7 @@ section{
   object-fit: cover;
 }
 }
+
+ .linkFollow{
+  color: var(--background);
+} 
